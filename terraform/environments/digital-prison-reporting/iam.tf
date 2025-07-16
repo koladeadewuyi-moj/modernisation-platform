@@ -28,6 +28,7 @@ data "aws_iam_policy_document" "circleci_iam_policy" {
     actions = [
       "athena:StartQueryExecution",
       "athena:GetQueryExecution",
+      "athena:ListTagsForResource",
       "autoscaling:PutScheduledUpdateGroupAction",
       "autoscaling:SetDesiredCapacity",
       "backup:Start*",
@@ -57,6 +58,7 @@ data "aws_iam_policy_document" "circleci_iam_policy" {
       "dms:ModifyEndpoint",
       "dms:RemoveTagsFromResource",
       "dms:TestConnection",
+      "dms:ModifyReplicationInstance",
       "dynamodb:GetItem",
       "dynamodb:PutItem",
       "datasync:Create*",
